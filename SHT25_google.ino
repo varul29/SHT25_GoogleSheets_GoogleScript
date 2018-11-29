@@ -20,8 +20,7 @@ const char* host = "script.google.com";
 const int httpsPort = 443; // define the secure port for HTTP protocol = 443
 
 //Define global variable
-volatile float Ctemp,Ftemp,humid; // volatile variable may change at any time--without any action being taken by the code the compiler finds nearby
-
+volatile float Ctemp,Ftemp,humid; // using volatile with variable - It tells the compiler that the value of the variable may change at any time--without any action being taken by the code the compiler finds nearby.
 // Use WiFiClientSecure class to create TLS connection ***Not In use***
 WiFiClientSecure client;
 // SHA1 fingerprint of the certificate, don't care with your GAS service
