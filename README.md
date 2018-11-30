@@ -32,6 +32,11 @@ After Initializing libraries, we will be defining the I2C process to be used to 
 
 - Start I2C transmission and initialize the registers and request for 2 bytes data from where we will read the sensor data.
 - If 2 bytes data will be available then read the sensor data and using mentioned below formulas we are converting the desired values 
+      
+      float humidity = (((data[0] * 256.0 + data[1]) * 125.0) / 65536.0) - 6; 
+      float cTemp = (((data[0] * 256.0 + data[1]) * 175.72) / 65536.0) - 46.85;
+      float fTemp = (cTemp * 1.8) + 32;
+      
 - Print the values in a serial monitor screen
 
 ## ESP8266 connection with WiFi and google spreadsheet
