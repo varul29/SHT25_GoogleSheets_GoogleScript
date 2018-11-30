@@ -1,5 +1,5 @@
 # SHT25_GoogleSheets_GoogleScript
-Sending SHT25 Sensor data to google spreadsheet without using the gscript editor as a bridge
+Sending SHT25 Sensor data to google spreadsheet by using the gscript editor as a bridge
 
 # Hardware
  - [Adafruit Huzzah ESP8266](https://www.thingbits.net/products/adafruit-huzzah-esp8266-wifi-breakout-board?utm_source=google&utm_medium=cpc&gclid=Cj0KCQiA3IPgBRCAARIsABb-iGK_yrh94I-yVBeadNt0Hj_m0wOOg0dfDr81zkfdsZZ1O1vGUczu-vkaAqOIEALw_wcB)
