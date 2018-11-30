@@ -12,16 +12,20 @@ unsigned long Interval = 5000;
 #define Addr 0x40
 
 //Define ESP8266 userid and password to connect with wifi network
+
 const char* ssid = "ssid";
 const char* password = "password
 
 //Define hostid where data will be send in script format
+  
 const char* host = "script.google.com";
 const int httpsPort = 443; // define the secure port for HTTP protocol = 443
 
 //Define global variable
+
 volatile float Ctemp,Ftemp,humid; // using volatile with variable - It tells the compiler that the value of the variable may change at any time--without any action being taken by the code the compiler finds nearby.
-// Use WiFiClientSecure class to create TLS connection ***Not In use***//
+
+// Use WiFiClientSecure class to create TLS connection - Not In use
 
 WiFiClientSecure client;
 
@@ -33,6 +37,7 @@ String SCRIPT_ID = "Replace by your Gscript service idE";
 void setup() 
 { 
   // Initialise I2C communication as MASTER
+  
   Wire.begin(2,14); //pins used for SDA, SCL connection in I2C
   Serial.begin(115200);
   Serial.println();
@@ -63,6 +68,7 @@ void loop()
 }
 
 // Function for Send data into Google Spreadsheet
+
 void sendData()
 {
   
@@ -79,7 +85,8 @@ void sendData()
   else {
   Serial.println("certificate doesn't match");
   }
-//***Mentioned below directly executed in String url***  
+  
+//Mentioned below directly executed in String url
 //  String tempC =  String(Ctemp, 1); 
 //  String tempF =  String(Ftemp, 1); 
 //  String humiD =  String(humid, 1); 
@@ -103,6 +110,7 @@ void sendData()
   String line1 = client.readStringUntil('\n');
   
   //Check whether arduino command interface able to perform the task or not
+  
   if (line1.startsWith("{\"state\":\"success\"")) {
   Serial.println("esp8266/Arduino CI successfull!");
   } 
@@ -120,10 +128,15 @@ void temptask()
 {
 unsigned int data[2];
   // Start I2C transmission
+  
   Wire.beginTransmission(Addr);
+  
   // Send humidity measurement command, NO HOLD master
+  
   Wire.write(0xF5);
+  
   // Stop I2C transmission
+  
   Wire.endTransmission();
   delay(500);
 
