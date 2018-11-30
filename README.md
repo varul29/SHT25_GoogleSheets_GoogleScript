@@ -1,13 +1,21 @@
 # SHT25_GoogleSheets_GoogleScript
 Sending SHT25 Sensor data to google spreadsheet without using the gscript editor as a bridge
 
+# Hardware
+ - [Adafruit Huzzah ESP8266](https://www.thingbits.net/products/adafruit-huzzah-esp8266-wifi-breakout-board?utm_source=google&utm_medium=cpc&gclid=Cj0KCQiA3IPgBRCAARIsABb-iGK_yrh94I-yVBeadNt0Hj_m0wOOg0dfDr81zkfdsZZ1O1vGUczu-vkaAqOIEALw_wcB)
+ - [SHT25 Sensor](https://store.ncd.io/product/sht25-humidity-and-temperature-sensor-%C2%B11-8rh-%C2%B10-2c-i2c-mini-module/)
+ - [Adafruit Huzzah I2C adapter](https://store.ncd.io/product/i2c-shield-for-adafruit-huzzah-esp8266-integrated-usb-and-i2c-port/)
+ - [I2C Cable](https://store.ncd.io/product/i%C2%B2c-cable/)
+
 # How stuff works
 
-Create the compatibility to fetch the readings of real-time data of sensors through ESP8266 is much simple.
+Fetching the readings of real-time data of sensors through ESP8266 and send the data to different Cloudplatforms is much simple.
 
-We are going to use Wire.h library in Arduino IDE for creating the two wired communication between Adafruit Huzzah Board and SHT25 sensor I2C module.
-Note: To avoid the complex wiring structure, I am going to use the I2C adapter for Adafruit Huzzah designed to connect the I2C sensor.
-For the newbie to setup the Esp8266 yo must go through the tutorial setup.
+We are going to use Wire.h library in Arduino IDE for creating the two wired communication between Adafruit Huzzah Board and SHT25 sensor I2C module and I2C cable.
+
+### Note: To avoid the complex wiring structure, I am going to use the I2C adapter for Adafruit Huzzah designed to connect the I2C sensor.
+
+For the newbie to setup the Esp8266 yo must go through the [ESP8266 setup](https://github.com/varul29/ESP8266/blob/master/README.md).
 
    - First Initialize the the libraries:
         - I2C :  #include <Wire.h>
@@ -16,7 +24,7 @@ For the newbie to setup the Esp8266 yo must go through the tutorial setup.
  
 # I2C module Execution Process in Arduino IDE
 
-First We will be defining the I2C process to be used to fetch the sensor readings convert them and shift the 8 bits data as per the requirements:
+After Initializing libraries, we will be defining the I2C process to be used to fetch the sensor readings convert them and shift the 8 bits data as per the requirements:
 
 - Initialize the registers in two wire I2C protocol for the I2C sensor module 
 
