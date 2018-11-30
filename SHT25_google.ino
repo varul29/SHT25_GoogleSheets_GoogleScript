@@ -19,7 +19,8 @@ const char* password = "password
 //Define hostid where data will be send in script format
   
 const char* host = "script.google.com";
-const int httpsPort = 443; // define the secure port for HTTP protocol = 443
+// define the secure port for HTTP protocol = 443
+const int httpsPort = 443; 
 
 //Define global variable
 
@@ -37,8 +38,8 @@ String SCRIPT_ID = "Replace by your Gscript service idE";
 void setup() 
 { 
   // Initialise I2C communication as MASTER
-  
-  Wire.begin(2,14); //pins used for SDA, SCL connection in I2C
+  //pins used for SDA, SCL connection in I2C
+  Wire.begin(2,14); 
   Serial.begin(115200);
   Serial.println();
   Serial.print("connecting to ");
