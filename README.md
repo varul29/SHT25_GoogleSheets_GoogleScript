@@ -46,9 +46,10 @@ After the execution  I2C modules we are going to learn about how to fetch the da
 - As we are going to use the HTTP client and will be defining HTTPS = 443 protocol for securing the HTTP path as the script will working in the secure path only.
 - Initialize the host details in code 
   
-      hostid  = "script.google.com"
-      const char* fingerprint = "copy paste similar values mention in code";
-      String SCRIPT_ID = " Replace by your Gscript service id “
+      const char* host = "script.google.com";
+      const int httpsPort = 443; 
+      String SCRIPT_ID = "<GScript Link ID>";
+
 
 ### Note: Script ID is mentioned in “web apps URL” while Gscript code will be published, just copy and paste the id mentioned below and initialize in above commands :
 
