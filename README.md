@@ -60,7 +60,7 @@ As we all have google account so sign in to google sheet with your account
 
 Current web app URL will appear as below :
 
-    https://script.google.com/macros/s/”<GScript API Key>”/exec:
+      https://script.google.com/macros/s/”<GScript API Key>”/exec:
 
 further used in ESP8266 code for fetching the data from sensors
 
@@ -68,24 +68,24 @@ further used in ESP8266 code for fetching the data from sensors
 
 We are going to use the HTTPS Get request to connect the data to the host id mentioned in gscript editor where we coded our data further to connect with google sheet.
 
-    function doGet(e) { 
-    Logger.log( JSON.stringify(e) );  // view parameters
-    var result = 'Ok'; // assume success
-    if (e.parameter == 'undefined') 
-    {
-      result = 'No Parameters';
+      function doGet(e) { 
+      Logger.log( JSON.stringify(e) );  // view parameters
+      var result = 'Ok'; // assume success
+      if (e.parameter == 'undefined') 
+      {
+         result = 'No Parameters';
+         }
+      else {
+      var sheet_id = '<google spreadsheet Api Key>';       // Spreadsheet ID
+      var sheet = SpreadsheetApp.openById(sheet_id).getActiveSheet();
+      var newRow = sheet.getLastRow() + 1;                        
+      var rowData = [];
       }
-    else {
-    var sheet_id = '<google spreadsheet Api Key>';       // Spreadsheet ID
-    var sheet = SpreadsheetApp.openById(sheet_id).getActiveSheet();
-    var newRow = sheet.getLastRow() + 1;                        
-    var rowData = [];
-    }
-    Logger.log(JSON.stringify(rowData));
-    // Write new row below
-    var newRange = sheet.getRange(newRow, 1, 1, rowData.length);
-    newRange.setValues([rowData]);
-    }
+      Logger.log(JSON.stringify(rowData));
+      // Write new row below
+      var newRange = sheet.getRange(newRow, 1, 1, rowData.length);
+      newRange.setValues([rowData]);
+      }
 
 # Limitations:
 
