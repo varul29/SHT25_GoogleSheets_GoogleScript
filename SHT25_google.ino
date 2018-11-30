@@ -129,15 +129,10 @@ void temptask()
 {
 unsigned int data[2];
   // Start I2C transmission
-  
   Wire.beginTransmission(Addr);
-  
   // Send humidity measurement command, NO HOLD master
-  
   Wire.write(0xF5);
-  
   // Stop I2C transmission
-  
   Wire.endTransmission();
   delay(500);
 
