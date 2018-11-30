@@ -14,7 +14,7 @@ unsigned long Interval = 5000;
 //Define ESP8266 userid and password to connect with wifi network
 
 const char* ssid = "ssid";
-const char* password = "password
+const char* password = "password";
 const char* host = "script.google.com"; //Define hostid where data will be send in script format
 
 // define the secure port for HTTP protocol = 443
