@@ -126,3 +126,10 @@ We are going to use the HTTPS Get request to connect the data to the host id men
 # Output
 
  ![alt text](https://github.com/varul29/SHT25_GoogleSheets_GoogleScript/blob/master/GScript_SHT25_Snaps/Output.PNG)
+ 
+ # Reference
+ 
+ I2C Sensor : https://github.com/ControlEverythingCommunity/SHT25
+ Spreadsheet with ESP8266: http://pdacontrolen.com/update-https-redirect-version-2-0-esp8266-google-spreadsheets/
+ Sensor moduele: https://store.ncd.io/product/sht25-humidity-and-temperature-sensor-%C2%B11-8rh-%C2%B10-2c-i2c-mini-module/
+ Datasheet : https://media.ncd.io/sites/2/20170721134452/Sensirion_Humidity_SHT25_Datasheet_V3.pdf
