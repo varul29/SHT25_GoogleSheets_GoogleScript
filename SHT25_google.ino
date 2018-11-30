@@ -15,10 +15,8 @@ unsigned long Interval = 5000;
 
 const char* ssid = "ssid";
 const char* password = "password
+const char* host = "script.google.com"; //Define hostid where data will be send in script format
 
-//Define hostid where data will be send in script format
-  
-const char* host = "script.google.com";
 // define the secure port for HTTP protocol = 443
 const int httpsPort = 443; 
 
