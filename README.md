@@ -31,7 +31,7 @@ After Initializing libraries, we will be defining the I2C process to be used to 
       #define Addr 0x40
 
 - Start I2C transmission and initialize the registers and request for 2 bytes data from where we will read the sensor data.
-- If 2 bytes data will be available then we will read the sensor data and using mentioned below formulas we are converting the desired values 
+- If 2 bytes data will be available then read the sensor data and using mentioned below formulas we are converting the desired values 
 - Print the values in a serial monitor screen
 
 ## ESP8266 connection with WiFi and google spreadsheet
