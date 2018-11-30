@@ -12,8 +12,8 @@ unsigned long Interval = 5000;
 #define Addr 0x40
 
 //Define ESP8266 userid and password to connect with wifi network
-const char* ssid = "DcubeAirtel";
-const char* password = "D@Airtel190";
+const char* ssid = "ssid";
+const char* password = "password
 
 //Define hostid where data will be send in script format
 const char* host = "script.google.com";
@@ -25,7 +25,7 @@ volatile float Ctemp,Ftemp,humid; // using volatile with variable - It tells the
 WiFiClientSecure client;
 // SHA1 fingerprint of the certificate, don't care with your GAS service
 const char* fingerprint = "fd 85 80 08 94 28 7b 0e 2f 13 06 09 d7 fd f0 23 40 7c e4 34";
-String SCRIPT_ID = "AKfycbyj1wW2B_a0iazJVj43-FHZCScxZX4MMpSHdkHIgMYma-11weQE";   // Replace by your Gscript service id 
+String SCRIPT_ID = "Replace by your Gscript service idE";    
 
 void setup() 
 { 
